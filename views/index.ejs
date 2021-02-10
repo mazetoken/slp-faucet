@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="Claim free SLP tokens">
+    <meta name="description" content="Claim SLP tokens">
   
     <!-- Favicon -->
     <link rel="apple-touch-icon" sizes="60x60" href="/apple-touch-icon.png">
@@ -20,10 +20,10 @@
     <meta property="og:url" content="https://simpleledger.network" />
     <meta property="og:type" content="website" />
     <meta property="og:title" content="The Simple Ledger Protocol Faucet" />
-    <meta property="og:description" content="Claim free SLP tokens" />
+    <meta property="og:description" content="Claim SLP tokens" />
     <meta property="og:image" content="" />
 
-    <title>SLP Faucet</title>
+    <title>MAZE SLP Token Faucet</title>
 
     <!-- Bootstrap core CSS -->
     <link href="css/bootstrap.min.css" rel="stylesheet">
@@ -47,7 +47,8 @@
         <img class="logo-main" src="img/logo-slp-faucet.png" alt="SLP Faucet" />
             <h1>Simple Ledger Protocol Faucet</h1>
             <p class="lead">Claim SLP tokens</p>
-        <p>The SLP faucet is designed to bring awareness and circulation to the SLP economy. Claim every 6 hours.</p>
+        <p>The SLP faucet is designed to bring awareness and circulation to the SLP economy. Claim every 6 hours.<br>
+        Donate to bitcoincash:qr2kzsxefw6esm0l7kx85pxlprvqzyyatgsgl5p7hq to keep this faucet running.</p>
 
         <form class="token-selector-form" action="/" method="post">
           <input name="address" type="text" placeholder="Enter your SLP address, ex: simpleledger:qp7l6ns2g…" required>
@@ -66,11 +67,11 @@
           <% if(error !== null){ %>
             <p>error: <%= error %></p>
           <% } %>
-          <p>Get your SLP address with <a href="https://wallet.bitcoin.com">Bitcoin.com wallet</a> , <a href="https://zapit.io/">Zapit Wallet</a> or <a href="https://simpleledger.cash/project/electron-cash-slp-edition/">Electron Cash SLP Edition</a>.</p>
+          <p>Get your SLP address with <a href="https://wallet.bitcoin.com">Bitcoin.com wallet (no SLP NFT supported yet)</a> , <a href="https://zapit.io/">Zapit Wallet</a> or <a href="https://simpleledger.cash/project/electron-cash-slp-edition/">Electron Cash SLP Edition</a>.</p>
           <p><input type="submit" value="Claim SLP tokens"></p>
           <p>
             <a
-              href="https://heroku.com/deploy?template=https://github.com/simpleledger/slp-faucet">
+              href="https://heroku.com/deploy?template=https://github.com/mazetoken/slp-faucet">
               <img src="https://www.herokucdn.com/deploy/button.svg" alt="Deploy">
             </a>
           </p>
