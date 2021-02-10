@@ -5,7 +5,7 @@ import * as slpjs from "slpjs";
 import { BchdNetwork, BchdValidator, Utils } from "slpjs";
 
 const bitbox = new BITBOX();
-const client = new GrpcClient({url: "bchd.ny1.simpleledger.io" });
+const client = new GrpcClient({url: "bchd.greyh.at:8335" });
 const validator = new BchdValidator(client, console);
 
 export class SlpFaucetHandler {

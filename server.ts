@@ -14,6 +14,57 @@ const sleep = (ms: number) => new Promise((resolve) => setTimeout(resolve, ms));
 const slpFaucet = new SlpFaucetHandler(process.env.MNEMONIC!);
 const faucetQty = parseInt(process.env.TOKENQTY!);
 
+let users = new Array();
+let spamArray = new Array();
+let addressArray = new Array();
+let spamAddresses = new Array();
+
+function clearFunc() {
+	console.log('clearing the users and address arrays, its been 6 hours');
+	users = [];
+	addressArray = [];
+}
+
+//setInterval(clearCookies, 5000);
+// 21600000
+// interval to run clearFunc every 6 hours in milliseconds
+setInterval(clearFunc, 21600000);
+
+function clearDistributedAmnt(){
+	totalDistAmnt = Number(0);
+}
+
+// interval to run clearFunc every 2 hours in milliseconds
+setInterval(clearDistributedAmnt, 7200000);
+
+function removeFromArray(userIP, address){
+			//error, remove userIP & address from arrays.
+          const indexIP = users.indexOf(userIP);
+          const indexAd = addressArray.indexOf(address);
+          if (indexIP > -1) {
+            users.splice(indexIP, 1);
+          }
+          if (indexAd > -1) {
+          	addressArray.splice(indexAd, 1);
+          }
+}
+
+let totalDistAmnt = Number(0); 
+
+function addDistAmnt(amount) {
+
+	totalDistAmnt = totalDistAmnt + amount;
+	console.log('Just added ' + amount + ' to Total. The total distributed amount in last 2 hours is now ' + totalDistAmnt);
+
+	return totalDistAmnt;
+}
+
+let errorMsg = 'You may only claim from the faucet once per 6 hours. Check back soon!';
+
+//permanently block spam users on each restart
+//spamArray.push('176.113.74.202');
+//spamArray.push('185.65.134.165');
+
 app.use(express.static("public"));
 app.use(bodyParser.urlencoded({ extended: true }));
 app.set("view engine", "ejs");
