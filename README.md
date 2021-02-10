@@ -1,6 +1,6 @@
 # SLP Faucet
 
-[![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy?template=https://github.com/simpleledger/slp-faucet)
+[![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy?template=https://github.com/mazetoken/slp-faucet)
 
 Users can enter their SLP address and the server will send the token quantity specified within the environment variables (i.e., per `TOKENQTY` and `TOKENID`) to the user's address.
 
