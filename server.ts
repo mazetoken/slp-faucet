@@ -2,7 +2,17 @@ import * as dotenv from "dotenv";
 dotenv.config();
 
 import * as express from "express";
+const rateLimit = require("express-rate-limit");
 const app = express();
+
+app.set('trust proxy', 1);
+
+const apiLimiter = rateLimit({
+  windowMs: 3 * 60 * 60 * 1000, // 3 hours
+  max: 3,
+  draft_polli_ratelimit_headers: true,
+});
+
 
 import BigNumber from "bignumber.js";
 import * as bodyParser from "body-parser";
