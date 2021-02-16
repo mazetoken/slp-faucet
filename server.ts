@@ -9,7 +9,7 @@ const app = express();
 app.set('trust proxy', 1);
 
 const apiLimiter = rateLimit({
-  windowMs: 3 * 60 * 60 * 1000, // 3 hours
+  windowMs: 3 * 60 * 1000, // 1 minute
   max: 3,
   draft_polli_ratelimit_headers: true,
 });
