@@ -12,7 +12,7 @@ export class SlpFaucetHandler {
     public addresses: string[];
     public wifs: { [key: string]: string };
     public network: BchdNetwork;
-    public currentFaucetAddressIndex = 4;
+    public currentFaucetAddressIndex = 0;
 
     private unconfirmedChainLength = new Map<string, number>();
     private blockHeight = 0;
@@ -107,7 +107,6 @@ export class SlpFaucetHandler {
     }
 
     public async selectFaucetAddressForTokens(tokenId: string): Promise<{ address: string, balance: slpjs.SlpBalancesResult }> {
-        this.currentFaucetAddressIndex = Math.floor(Math.random() * 18);
         const addresses = this.addresses.filter((_, i) => i >= this.currentFaucetAddressIndex).map((a) => Utils.toCashAddress(a));
         for (let i = 0; i < addresses.length; i++) {
             if (this.unconfirmedChainLength.get(this.addresses[i])! > 49) {
@@ -136,17 +135,16 @@ export class SlpFaucetHandler {
             if (bals.slpTokenBalances[tokenId].isGreaterThan(0) === true && bals.satoshis_available_bch > sendCost) {
                 console.log("Using address index:", this.currentFaucetAddressIndex);
                 console.log("-----------------------------------");
-                // this.currentFaucetAddressIndex++;
                 return { address: Utils.toSlpAddress(addresses[i]), balance: bals };
             }
             console.log("Address index", this.currentFaucetAddressIndex, "has insufficient BCH to fuel token transaction, trying the next index.");
             console.log("-----------------------------------");
-            this.currentFaucetAddressIndex = (this.currentFaucetAddressIndex + 1) % 17
+            this.currentFaucetAddressIndex++;
         }
         throw Error("There are no addresses with sufficient balance");
     }
 
-     public async simpleTokenSend(tokenId: string, sendAmount: BigNumber, inputUtxos: slpjs.SlpAddressUtxoResult[], tokenReceiverAddresses: string | string[], changeReceiverAddress: string): Promise<string> {
+    public async simpleTokenSend(tokenId: string, sendAmount: BigNumber, inputUtxos: slpjs.SlpAddressUtxoResult[], tokenReceiverAddresses: string | string[], changeReceiverAddress: string): Promise<string> {
         await this.increaseChainLength();
         return await this.network.simpleTokenSend(tokenId, sendAmount, inputUtxos, tokenReceiverAddresses, changeReceiverAddress);
     }
