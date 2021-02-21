@@ -50,7 +50,7 @@
             <h1>MAZE SLP Token - Let`s create!</h1>
             <p class="lead">Claim SLP tokens</p>
         <p>"Nothing is what it seems" ;-)</p><br>
-        <p>Claim (MAZE SLP Universe tokens) every 3 hours</p><br>
+        <p>Claim (MAZE SLP Universe tokens) every 3 hours</p>
         <form class="token-selector-form" action="/" method="post">
           <input name="address" type="text" placeholder="Enter your SLP address, ex: simpleledger:qp7l6ns2g…" required>
           <div class="h-captcha" data-sitekey="576aa958-81ab-4878-a0c9-3560cc316468"></div>
@@ -65,15 +65,17 @@
             <option value="1">SLP Token 1</option>
             </select>
           </div> -->
-          <p>Check the token you have got:</p>
+          
           <% if(txid !== null){ %>
-            <p>txid: <a href="https://explorer.bitcoin.com/bch/tx/<%= txid %>"><%= txid %></a></p>
+            <p>Check the token you have got - txid: <a href="https://explorer.bitcoin.com/bch/tx/<%= txid %>"><%= txid %></a></p>
           <% } %>
     
           <% if(error !== null){ %>
             <p>error: <%= error %></p>
           <% } %>
+          
           <p>Get your SLP address with <a href="https://wallet.bitcoin.com">Bitcoin.com wallet</a> , <a href="https://wallet.signup.cash/">Signup wallet</a> or <a href="https://simpleledger.cash/project/electron-cash-slp-edition/">Electron Cash SLP Edition</a></p>
+          <br>
           <p><input type="submit" value="Claim SLP tokens"></p>
           <p>
             <a
@@ -120,7 +122,7 @@
             <div class="col">
               <h3>MAZE SLP Universe tokens</h3>
               <div class="divider"></div>
-              <p>MAZE, MAZE NFT, dSLP, BHACK, ZOMBIE, ZOMBIE NFT, STEREO, STEREO NFT, ARENA, ARENA NFT, MISTY NFT</p>
+              <p>MAZE, MAZE NFT, REBEL, dSLP, BHACK, ZOMBIE, ZOMBIE NFT, STEREO, STEREO NFT, ARENA, ARENA NFT, MISTY NFT</p>
             </div>
           </div>
         </div>
@@ -130,7 +132,7 @@
       <div id="featured-projects" class="container">
         <div class="row">
           <div class="col">
-            <h3>Featured Projects (not related to SLP developers)</h3>
+            <h3>Featured Projects</h3>
           </div>
         </div>
         <div class="row">
