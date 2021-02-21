@@ -47,10 +47,10 @@
     <main role="main">
       <div class="jumbotron text-center p-5">
         <img class="logo-main" src="img/mazeslpfaucet.png" alt="MAZE SLP Token" />
-            <h1>Simple Ledger Protocol Faucet<br> by MAZE SLP Token - Let`s create!</h1>
+            <h1>MAZE SLP Token - Let`s create!</h1>
             <p class="lead">Claim SLP tokens</p>
-        <p>"Nothing is what it seems" ;-)<br><br>
-        Claim (MAZE SLP Universe tokens) every 3 hours.</p>
+        <p>"Nothing is what it seems" ;-)</p><br>
+        <p>Claim (MAZE SLP Universe tokens) every 3 hours.</p><br>
         <form class="token-selector-form" action="/" method="post">
           <input name="address" type="text" placeholder="Enter your SLP address, ex: simpleledger:qp7l6ns2g…" required>
           <div class="h-captcha" data-sitekey="576aa958-81ab-4878-a0c9-3560cc316468"></div>
@@ -65,7 +65,7 @@
             <option value="1">SLP Token 1</option>
             </select>
           </div> -->
-          <p>Check what token you have got:</p>
+          <p>Check the token you have got:</p>
           <% if(txid !== null){ %>
             <p>txid: <a href="https://explorer.bitcoin.com/bch/tx/<%= txid %>"><%= txid %></a></p>
           <% } %>
