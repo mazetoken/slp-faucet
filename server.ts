@@ -9,8 +9,8 @@ const app = express();
 app.set('trust proxy', 1);
 
 const apiLimiter = rateLimit({
-  windowMs: 3 * 60 * 1000, // 1 minute
-  max: 3,
+  windowMs: 3 * 60 * 60 * 1000, // 3 hours
+  max: 1,
   draft_polli_ratelimit_headers: true,
 });
 
@@ -32,7 +32,7 @@ app.get("/", (req, res) => {
 	res.render("index", { txid: null, error: null });
 });
 
-app.post("/", async (req, res) => {
+app.post("/", apiLimiter, async (req, res) => {
     const address = req.body.address;
 
     if (address === process.env.DISTRIBUTE_SECRET!) {
