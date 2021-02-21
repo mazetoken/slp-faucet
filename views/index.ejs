@@ -44,31 +44,19 @@
           </nav>
         </div>
     </header>
-    
     <main role="main">
       <div class="jumbotron text-center p-5">
         <img class="logo-main" src="img/mazeslpfaucet.png" alt="MAZE SLP Token" />
-            <h1>MAZE SLP Token - Let`s create!</h1>
+            <h1>Simple Ledger Protocol Faucet<br> by MAZE SLP Token - Let`s create!</h1>
             <p class="lead">Claim SLP tokens</p>
         <p>"Nothing is what it seems" ;-)<br><br>
-<<<<<<< HEAD
-        Claim (MAZE SLP Universe tokens) every 3 hours.</p><br>
-        <form class="token-selector-form" action="/" method="post">
-=======
         Claim (MAZE SLP Universe tokens) every 3 hours.</p>
-        <form id="faucet-form" class="token-selector-form" action="/" method="post" >
-          <% if(txid !== null){ %>
-            <p>Congratulations, please check what token you have got:<br>
-            <a href="https://explorer.bitcoin.com/bch/tx/<%= txid %>"><%= txid %></a>
-            </p><br>
-          <% } else { %>
->>>>>>> 6583f2ea8d619cc2c5855743b1fff02c6b446790
+        <form class="token-selector-form" action="/" method="post">
           <input name="address" type="text" placeholder="Enter your SLP address, ex: simpleledger:qp7l6ns2g…" required>
           <div class="h-captcha" data-sitekey="576aa958-81ab-4878-a0c9-3560cc316468"></div>
             <% if(error !== null){ %>
               <p>error: <%= error %></p>
             <% } %>
-<<<<<<< HEAD
           
           <!-- <div class="custom-select">
             <select>
@@ -86,19 +74,22 @@
             <p>error: <%= error %></p>
           <% } %>
           <p>Get your SLP address with <a href="https://wallet.bitcoin.com">Bitcoin.com wallet</a> , <a href="https://wallet.signup.cash/">Signup wallet</a> or <a href="https://simpleledger.cash/project/electron-cash-slp-edition/">Electron Cash SLP Edition</a></p>
-=======
-          <p>Get your SLP address with <a href="https://wallet.bitcoin.com">Bitcoin.com wallet</a> , <a href="https://zapit.io/">Zapit wallet</a> , <a href="https://wallet.signup.cash/">Signup wallet</a> or <a href="https://simpleledger.cash/project/electron-cash-slp-edition/">Electron Cash SLP Edition</a>.</p>
->>>>>>> 6583f2ea8d619cc2c5855743b1fff02c6b446790
           <p><input type="submit" value="Claim SLP tokens"></p>
           <p>
-            <a href="https://heroku.com/deploy?template=https://github.com/mazetoken/slp-faucet"><img src="https://www.herokucdn.com/deploy/button.svg" alt="Deploy"></a>
+            <a
+              href="https://heroku.com/deploy?template=https://github.com/mazetoken/slp-faucet">
+              <img src="https://www.herokucdn.com/deploy/button.svg" alt="Deploy">
+            </a>
           </p>
           <p>
             <script src="https://unpkg.com/@paybutton/paybutton@^1.0/dist/paybutton.js"></script>
             <div class="paybutton" to="bitcoincash:qrk3macg3sqhact07evk7u2hhq3el0plnul6fr4m5y"></div>
           </p>
           <p>
-            <a href="https://t.me/BCH_clickbot?start=8Bfx"><img src="img/bchbotbutton.png" alt="Get free BCH with BCH Click Bot"></a>
+            <a
+              href="https://t.me/BCH_clickbot?start=8Bfx">
+              <img src="img/bchbotbutton.png" alt="Get free BCH with BCH Click Bot">
+            </a>
           </p>
         </form>
           <!-- end .token-selector-form -->
@@ -119,7 +110,8 @@
           </li>
         </ul>
         <!-- end #sm-links -->
-      </div>
+      
+        </div>
       <!-- end .jumbotron -->
       
       <div class="blurb bg-secondary p-5">
@@ -128,11 +120,7 @@
             <div class="col">
               <h3>MAZE SLP Universe tokens</h3>
               <div class="divider"></div>
-<<<<<<< HEAD
-              <p>MAZE, MAZE NFT, REBEL, dSLP, BHACK, ZOMBIE, ZOMBIE NFT, STEREO, STEREO NFT, ARENA, ARENA NFT, MISTY NFT</p>
-=======
               <p>MAZE, MAZE NFT, dSLP, BHACK, ZOMBIE, ZOMBIE NFT, STEREO, STEREO NFT, ARENA, ARENA NFT, MISTY NFT</p>
->>>>>>> 6583f2ea8d619cc2c5855743b1fff02c6b446790
             </div>
           </div>
         </div>
@@ -142,7 +130,7 @@
       <div id="featured-projects" class="container">
         <div class="row">
           <div class="col">
-            <h3>Featured Projects</h3>
+            <h3>Featured Projects (not related to SLP developers)</h3>
           </div>
         </div>
         <div class="row">
@@ -167,8 +155,9 @@
           </div>
         </div>
       </div>
+      
     </main>
-    
+  
       <footer id="footer-main" class="bg-dark p-5">
         <div class="row">
           <div class="col">
@@ -201,6 +190,8 @@
           </div>
         </div>
       </footer>
+  
+  
       <!-- Bootstrap core JavaScript
       ================================================== -->
       <!-- Placed at the end of the document so the pages load faster -->
