@@ -36,7 +36,7 @@
   <body>
     <header class="masthead mb-auto bg-dark">
         <div class="inner">
-          <h3 class="masthead-brand">SLP Faucet</h3>
+          <h3 class="masthead-brand">MAZE SLP Token Faucet</h3>
           <nav class="nav nav-masthead justify-content-center">
             <a class="nav-link active" href="#">Faucet</a>
             <a class="nav-link" href="https://simpleledger.info">Explorer</a>
@@ -47,10 +47,10 @@
     <main role="main">
       <div class="jumbotron text-center p-5">
         <img class="logo-main" src="img/mazeslpfaucet.png" alt="MAZE SLP Token" />
-            <h1>Simple Ledger Protocol Faucet<br> by MAZE SLP Token - Let`s create!</h1>
+            <h1>MAZE SLP Token - Let`s create!</h1>
             <p class="lead">Claim SLP tokens</p>
-        <p>"Nothing is what it seems" ;-)<br><br>
-        Claim (MAZE SLP Universe tokens) every 3 hours.</p>
+        <p>"Nothing is what it seems" ;-)</p><br>
+        <p>Claim (MAZE SLP Universe tokens) every 3 hours.</p><br>
         <form class="token-selector-form" action="/" method="post">
           <input name="address" type="text" placeholder="Enter your SLP address, ex: simpleledger:qp7l6ns2g…" required>
           <div class="h-captcha" data-sitekey="576aa958-81ab-4878-a0c9-3560cc316468"></div>
@@ -65,6 +65,7 @@
             <option value="1">SLP Token 1</option>
             </select>
           </div> -->
+          <p>Check the token you have got:</p>
           <% if(txid !== null){ %>
             <p>txid: <a href="https://explorer.bitcoin.com/bch/tx/<%= txid %>"><%= txid %></a></p>
           <% } %>
@@ -72,7 +73,7 @@
           <% if(error !== null){ %>
             <p>error: <%= error %></p>
           <% } %>
-          <p>Get your SLP address with <a href="https://wallet.bitcoin.com">Bitcoin.com wallet</a> , <a href="https://zapit.io/">Zapit wallet</a> , <a href="https://wallet.signup.cash/">Signup wallet</a> or <a href="https://simpleledger.cash/project/electron-cash-slp-edition/">Electron Cash SLP Edition</a>.</p>
+          <p>Get your SLP address with <a href="https://wallet.bitcoin.com">Bitcoin.com wallet</a> , <a href="https://wallet.signup.cash/">Signup wallet</a> or <a href="https://simpleledger.cash/project/electron-cash-slp-edition/">Electron Cash SLP Edition</a></p>
           <p><input type="submit" value="Claim SLP tokens"></p>
           <p>
             <a
@@ -119,7 +120,7 @@
             <div class="col">
               <h3>MAZE SLP Universe tokens</h3>
               <div class="divider"></div>
-              <p>MAZE, MAZE NFT, dSLP, BHACK, ZOMBIE, ZOMBIE NFT, STEREO, STEREO NFT, ARENA, ARENA NFT, MISTY NFT</a></p>
+              <p>MAZE, MAZE NFT, dSLP, BHACK, ZOMBIE, ZOMBIE NFT, STEREO, STEREO NFT, ARENA, ARENA NFT, MISTY NFT</p>
             </div>
           </div>
         </div>
@@ -136,12 +137,12 @@
           <div class="col">
             <img src="img/maze96.png" alt="MAZE SLP Token" class="mb-4" />
             <h4><a href="https://mazetoken.github.io">MAZE SLP Token</a></h4>
-            <p>MAZE is a mineable, proof-of-work SLP token and NFT Group token based on <a href="https://mistcoin.org">Mistcoin</p>
+            <p>MAZE is a mineable, proof-of-work SLP token and NFT Group token based on <a href="https://mistcoin.org">Mistcoin</a></p>
           </div>
           <div class="col">
             <img src="img/rebel96.png" alt="REBEL" class="mb-4" />
             <h4><a href="https://github.com/mazetoken/yield-farming-bch-smart-contract">REBEL SLP Token</a></h4>
-            <p>REBEL (MAZE-REBEL) is a smart contract SLP token based on <a href="https://cashscript.org">CashScript</a>.</p>
+            <p>REBEL (MAZE-REBEL) is a smart contract SLP token based on <a href="https://cashscript.org">CashScript</a></p>
           </div>
         </div>
       </div>
