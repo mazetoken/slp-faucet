@@ -3,25 +3,12 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="Claim SLP tokens">
+    <meta name="description" content="SLP tokens faucet">
   
     <!-- Favicon -->
     <link rel="apple-touch-icon" sizes="60x60" href="/apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
-
-    <!-- Social Cards -->
-    <meta name="twitter:card" content="summary" />
-    <meta name="twitter:site" content="" />
-    <meta name="twitter:title" content="The Simple Ledger Protocol Faucet" />
-    <meta name="twitter:description" content="Browse and explore tokens built on top of Bitcoin Cash" />
-    <meta name="twitter:image" content="https://simpleledger.info/img/social.png" />
-    <meta name="twitter:image:alt" content="The Simple Ledger Protocol Faucet" />
-    <meta property="og:url" content="https://simpleledger.network" />
-    <meta property="og:type" content="website" />
-    <meta property="og:title" content="The Simple Ledger Protocol Faucet" />
-    <meta property="og:description" content="Claim SLP tokens" />
-    <meta property="og:image" content="" />
 
     <title>MAZE SLP Token Faucet</title>
 
@@ -36,7 +23,7 @@
   <body>
     <header class="masthead mb-auto bg-dark">
         <div class="inner">
-          <h3 class="masthead-brand">MAZE SLP Token Faucet</h3>
+          <h3 class="masthead-brand">MAZE Token</h3>
           <nav class="nav nav-masthead justify-content-center">
             <a class="nav-link active" href="#">Faucet</a>
             <a class="nav-link" href="https://simpleledger.info">Explorer</a>
@@ -46,11 +33,11 @@
     </header>
     <main role="main">
       <div class="jumbotron text-center p-5">
-        <img class="logo-main" src="img/mazeslpfaucet.png" alt="MAZE SLP Token" />
-            <h1>MAZE SLP Token - Let`s create!</h1>
-            <p class="lead">Claim SLP tokens</p>
-        <p>"Nothing is what it seems" ;-)</p><br>
-        <p>Claim (MAZE SLP Universe tokens) every 3 hours</p>
+        <img class="logo-main" src="img/mazeslpfaucet.png" alt="MAZE Token" />
+            <h1>MAZE Token</h1>
+            <p class="lead">Let`s create!</p>
+        <p>You are in MAZE now. Nothing is what it seems ;-)</p><br>
+        <p>Claim every 4 hours</p>
         <form class="token-selector-form" action="/" method="post">
           <input name="address" type="text" placeholder="Enter your SLP address, ex: simpleledger:qp7l6ns2g…" required>
           <div class="h-captcha" data-sitekey="576aa958-81ab-4878-a0c9-3560cc316468"></div>
@@ -74,24 +61,12 @@
             <p>error: <%= error %></p>
           <% } %>
           
-          <p>Get your SLP address with <a href="https://wallet.bitcoin.com">Bitcoin.com wallet</a> , <a href="https://wallet.signup.cash/">Signup wallet</a> or <a href="https://simpleledger.cash/project/electron-cash-slp-edition/">Electron Cash SLP Edition</a></p>
+          <p>Get your SLP address with <a href="https://wallet.bitcoin.com">Bitcoin.com wallet</a>, <a href="https://wallet.signup.cash/">Signup wallet</a>, <a href="https://zapit.io/">Zapit wallet</a> or <a href="https://simpleledger.cash/project/electron-cash-slp-edition/">Electron Cash SLP Edition</a></p>
           <br>
-          <p><input type="submit" value="Claim SLP tokens"></p>
-          <p>
-            <a
-              href="https://heroku.com/deploy?template=https://github.com/mazetoken/slp-faucet">
-              <img src="https://www.herokucdn.com/deploy/button.svg" alt="Deploy">
-            </a>
-          </p>
+          <p><input type="submit" value="Claim SLP tokens"></p><br>
           <p>
             <script src="https://unpkg.com/@paybutton/paybutton@^1.0/dist/paybutton.js"></script>
             <div class="paybutton" to="bitcoincash:qrk3macg3sqhact07evk7u2hhq3el0plnul6fr4m5y"></div>
-          </p>
-          <p>
-            <a
-              href="https://t.me/BCH_clickbot?start=8Bfx">
-              <img src="img/bchbotbutton.png" alt="Get free BCH with BCH Click Bot">
-            </a>
           </p>
         </form>
           <!-- end .token-selector-form -->
@@ -115,19 +90,6 @@
       
         </div>
       <!-- end .jumbotron -->
-      
-      <div class="blurb bg-secondary p-5">
-        <div class="container">
-          <div class="row">
-            <div class="col">
-              <h3>MAZE SLP Universe tokens</h3>
-              <div class="divider"></div>
-              <p>MAZE, MAZE NFT, REBEL, dSLP, BHACK, ZOMBIE, ZOMBIE NFT, STEREO, STEREO NFT, ARENA, ARENA NFT, MISTY NFT</p>
-            </div>
-          </div>
-        </div>
-      </div>
-      <!-- end .blurb -->
       
       <div id="featured-projects" class="container">
         <div class="row">
@@ -153,7 +115,7 @@
       <div id="banner-bottom">
         <div class="row p-5 text-center">
           <div class="col">
-            <h3>Get Started with SLP Tokens</h3>
+            <h3>Get started with SLP tokens</h3>
           </div>
         </div>
       </div>
@@ -173,7 +135,7 @@
             </ul>
           </div>
           <div class="col">
-            <h4>Resources</h4>
+            <h4>SLP resources</h4>
             <ul class="list-unstyled text-small">
               <li><a class="text-muted" href="https://simpleledger.cash">simpleledger.cash</a></li>
               <li><a class="text-muted" href="https://github.com/simpleledger/slp-specifications">specification</a></li>
@@ -187,7 +149,7 @@
               <li><a class="text-muted" href="https://www.youtube.com/channel/UC_WJO3lyHAhdU6oEk0lhMLw">SimpleLedger Youtube</a></li>
               <li><a class="text-muted" href="https://twitter.com/SimpleLedger">SimpleLedger Twitter</a></li>
               <li><a class="text-muted" href="http://t.me/fountainheadcash">Fountainhead Chat</a></li>
-              <li><a class="text-muted" href="https://t.me/mazeslptoken">MAZE SLP Token Chat</a></li>
+              <li><a class="text-muted" href="https://t.me/mazeslptoken">MAZE Token Telegram Group</a></li>
             </ul>
           </div>
         </div>

@@ -1,7 +1,7 @@
 {
   "name": "SLP Faucet Example",
   "description": "An example of an SLP faucet website.",
-  "repository": "https://github.com/mazetoken/slp-faucet",
+  "repository": "https://github.com/simpleledger/slp-faucet",
   "logo": "https://slp-faucet.herokuapp.com/img/logo-slp-faucet.png",
   "keywords": ["node", "bch", "slp", "faucet"],
   "env": {
