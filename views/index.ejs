@@ -23,11 +23,11 @@
   <body>
     <header class="masthead mb-auto bg-dark">
         <div class="inner">
-          <h3 class="masthead-brand">MAZE Token</h3>
+          <h3 class="masthead-brand">SLP Faucet</h3>
           <nav class="nav nav-masthead justify-content-center">
             <a class="nav-link active" href="#">Faucet</a>
-            <a class="nav-link" href="https://simpleledger.info">Explorer</a>
-            <a class="nav-link" href="https://simpleledger.cash">Learn More</a>
+            <a class="nav-link" href="https://simpleledger.info">SLP Explorer</a>
+            
           </nav>
         </div>
     </header>
@@ -35,9 +35,8 @@
       <div class="jumbotron text-center p-5">
         <img class="logo-main" src="img/mazeslpfaucet.png" alt="MAZE Token" />
             <h1>MAZE Token</h1>
-            <p class="lead">Let`s create!</p>
-        <p>You are in MAZE now. Nothing is what it seems ;-)</p><br>
-        <p>Claim every 4 hours</p>
+            <p class="lead">Let`s create!</p><br>
+        <p>Claim REBEL token every 4 hours</p>
         <form class="token-selector-form" action="/" method="post">
           <input name="address" type="text" placeholder="Enter your SLP address, ex: simpleledger:qp7l6ns2g…" required>
           <div class="h-captcha" data-sitekey="576aa958-81ab-4878-a0c9-3560cc316468"></div>
@@ -54,7 +53,7 @@
           </div> -->
           
           <% if(txid !== null){ %>
-            <p>Check the token you have got - txid: <a href="https://explorer.bitcoin.com/bch/tx/<%= txid %>"><%= txid %></a></p>
+            <p>Congratulations. You have REBEL now - <a href="https://explorer.bitcoin.com/bch/tx/<%= txid %>"><%= txid %></a></p>
           <% } %>
     
           <% if(error !== null){ %>
@@ -74,16 +73,7 @@
         <h4 class="mb-4">Stay up to date:</h4>
         <ul id="sm-links" class="nav justify-content-center">
           <li class="nav-item">
-            <a href="https://t.me/simpleledger"><img src="img/telegram.png" alt="Telegram" /></a>
-          </li>
-          <li class="nav-item">
             <a href="https://t.me/mazeslptoken"><img src="img/telegram.png" alt="Telegram" /></a>
-          </li>
-          <li class="nav-item">
-            <a href="https://twitter.com/SimpleLedger"><img src="img/twitter.png" alt="Twitter" /></a>
-          </li>
-          <li class="nav-item">
-            <a href="https://www.youtube.com/channel/UC_WJO3lyHAhdU6oEk0lhMLw"><img src="img/youtube.png" alt="Youtube" /></a>
           </li>
         </ul>
         <!-- end #sm-links -->
@@ -101,7 +91,7 @@
           <div class="col">
             <img src="img/maze96.png" alt="MAZE SLP Token" class="mb-4" />
             <h4><a href="https://mazetoken.github.io">MAZE SLP Token</a></h4>
-            <p>MAZE is a mineable, proof-of-work SLP token and NFT Group token based on <a href="https://mistcoin.org">Mistcoin</a></p>
+            <p>MAZE is a mineable (proof-of-work) SLP token and a mineable NFT Group token based on <a href="https://mistcoin.org">Mistcoin</a></p>
           </div>
           <div class="col">
             <img src="img/rebel96.png" alt="REBEL" class="mb-4" />
@@ -111,14 +101,6 @@
         </div>
       </div>
       <!-- end #featured-projects -->
-      
-      <div id="banner-bottom">
-        <div class="row p-5 text-center">
-          <div class="col">
-            <h3>Get started with SLP tokens</h3>
-          </div>
-        </div>
-      </div>
       
     </main>
   
@@ -132,12 +114,14 @@
               <li><a class="text-muted" href="https://github.com/fountainhead-cash/slpserve">slpserve</a></li>
               <li><a class="text-muted" href="https://github.com/fountainhead-cash/slpqueryd">slpqueryd</a></li>
               <li><a class="text-muted" href="https://github.com/simpleledger/slpjs">slpjs</a></li>
+              <li><a class="text-muted" href="https://github.com/simpleledger/slp-faucet">slp-faucet</a></li>
             </ul>
           </div>
           <div class="col">
             <h4>SLP resources</h4>
             <ul class="list-unstyled text-small">
               <li><a class="text-muted" href="https://simpleledger.cash">simpleledger.cash</a></li>
+              <li><a class="text-muted" href="https://simpleledger.info">simpleledger.info</a></li>
               <li><a class="text-muted" href="https://github.com/simpleledger/slp-specifications">specification</a></li>
               <li><a class="text-muted" href="https://developer.bitcoin.com/slp/">slp-sdk</a></li>
             </ul>
