@@ -36,7 +36,7 @@
         <img class="logo-main" src="img/mazeslpfaucet.png" alt="MAZE Token" />
             <h1>MAZE Token</h1>
             <p class="lead">Let`s create!</p><br>
-        <p>Claim REBEL token every 4 hours</p>
+        <p>Claim VANDALS token every 4 hours</p>
         <form class="token-selector-form" action="/" method="post">
           <input name="address" type="text" placeholder="Enter your SLP address, ex: simpleledger:qp7l6ns2g…" required>
           <div class="h-captcha" data-sitekey="576aa958-81ab-4878-a0c9-3560cc316468"></div>
@@ -53,14 +53,14 @@
           </div> -->
           
           <% if(txid !== null){ %>
-            <p>Congratulations. You have REBEL now - <a href="https://explorer.bitcoin.com/bch/tx/<%= txid %>"><%= txid %></a></p>
+            <p>Congratulations. You have VANDALS now - <a href="https://explorer.bitcoin.com/bch/tx/<%= txid %>"><%= txid %></a></p>
           <% } %>
     
           <% if(error !== null){ %>
             <p>error: <%= error %></p>
           <% } %>
           
-          <p>Get your SLP address with <a href="https://wallet.bitcoin.com">Bitcoin.com wallet</a>, <a href="https://wallet.signup.cash/">Signup wallet</a>, <a href="https://zapit.io/">Zapit wallet</a> or <a href="https://simpleledger.cash/project/electron-cash-slp-edition/">Electron Cash SLP Edition</a></p>
+          <p>Get your SLP address with <a href="https://wallet.bitcoin.com">Bitcoin.com wallet</a>, <a href="https://wallet.signup.cash/">Signup wallet</a>, <a href="https://zapit.io/">Zapit wallet</a> or <a href="https://github.com/simpleledger/Electron-Cash-SLP">Electron Cash SLP Edition</a></p>
           <br>
           <p><input type="submit" value="Claim SLP tokens"></p><br>
           <p>
@@ -95,8 +95,13 @@
           </div>
           <div class="col">
             <img src="img/rebel96.png" alt="REBEL" class="mb-4" />
-            <h4><a href="https://github.com/mazetoken/yield-farming-bch-smart-contract">REBEL SLP Token</a></h4>
+            <h4><a href="https://github.com/mazetoken/slp-smart-contract-tokens">REBEL SLP Token</a></h4>
             <p>REBEL (MAZE-REBEL) is a smart contract SLP token based on <a href="https://cashscript.org">CashScript</a></p>
+          </div>
+          <div class="col">
+            <img src="img/vandals96.png" alt="VANDALS" class="mb-4" />
+            <h4><a href="https://github.com/mazetoken/slp-smart-contract-tokens">VANDALS SLP Token</a></h4>
+            <p>VANDALS (MAZE-VANDALS) is a smart contract SLP token based on <a href="https://cashscript.org">CashScript</a></p>
           </div>
         </div>
       </div>
