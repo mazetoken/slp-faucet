@@ -1,6 +1,5 @@
 import * as dotenv from "dotenv";
 dotenv.config();
-
 import * as express from "express";
 const rateLimit = require("express-rate-limit");
 const { verify } = require('hcaptcha');
@@ -75,7 +74,7 @@ app.post("/", apiLimiter, async (req, res) => {
         if (! verifyData.success) {
             throw new Error('captcha verification failed');
         }
-    } catch (e) {
+    catch (e) {
         res.render("index", { txid: null, error: e.message });
         return;
     }

@@ -1,3 +1,19 @@
+# MAZE SLP tokens faucet
+
+https://mazetoken.github.io
+
+To run the faucet locally set variables in .env file and uncomment PORT. From a command line run:
+
+`npm i`
+
+`npm start`
+
+Open web browser and type localhost:3000
+
+This faucet version has hCaptcha and app limiter (1 claim per 4 hours) enabled. You will need to change it for your application (server.ts file and views index.ejs)
+
+----------------------------------------------------------------------------------
+
 # SLP Faucet
 
 [![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy?template=https://github.com/simpleledger/slp-faucet)

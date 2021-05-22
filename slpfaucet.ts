@@ -1,12 +1,31 @@
+import * as dotenv from "dotenv";
+dotenv.config();
 import BigNumber from "bignumber.js";
-import { BITBOX } from "bitbox-sdk";
+import { BITBOX, ECPair } from "bitbox-sdk";
 import { GrpcClient } from "grpc-bchrpc-node";
 import * as slpjs from "slpjs";
-import { BchdNetwork, BchdValidator, Utils } from "slpjs";
+import { BchdNetwork, BchdValidator, Utils, Validation } from "slpjs";
+import { ValidatorType1 } from "slp-validate";
 
 const bitbox = new BITBOX();
-const client = new GrpcClient({url: "bchd.fountainhead.cash" });
+const client = new GrpcClient({ url: process.env.BCHD_GRPC_URL });
 const validator = new BchdValidator(client, console);
+const txid: string = process.env.TOKENID!;
+
+// Use slp-validate (BCHD gRPC)
+(async function() {
+    console.time("SLP-VALIDATE-GRPC");
+    const slpValidator = new ValidatorType1({ getRawTransaction: async (txid: string) => {
+        const res = await client.getRawTransaction({ hash: txid, reversedHashOrder: true });
+        return Buffer.from(res.getTransaction_asU8());
+    } });
+    console.log("Validating:", txid);
+    console.log("This may take a several seconds...");
+    const isValid = await slpValidator.isValidSlpTxid({ txid });
+    console.log("Final Result:", isValid);
+    // console.log("WARNING: THIS VALIDATION METHOD COMES WITH NO BURN PROTECTION.");
+    console.timeEnd("SLP-VALIDATE-GRPC");
+})();
 
 export class SlpFaucetHandler {
     public addresses: string[];
@@ -126,7 +145,7 @@ export class SlpFaucetHandler {
             // console.log("slp address:", Utils.toSlpAddress(a[i].cashAddress));
             console.log("cash address:", Utils.toCashAddress(addresses[i]));
             // console.log("unconfirmed balanceSat (includes tokens):", a[i].unconfirmedBalanceSat);
-            // console.log("confirmed balanceSat (includes tokens):", a[i].balanceSat);
+            /// console.log("confirmed balanceSat (includes tokens):", a[i].balanceSat);
             console.log("Processing this address' UTXOs with SLP validator...");
             const sendCost = this.network.slp.calculateSendCost(60, bals.nonSlpUtxos.length + bals.slpTokenUtxos[tokenId].length, 3, addresses[0]) - 546;
             console.log("Token input quantity: ", bals.slpTokenBalances[tokenId].toFixed());
